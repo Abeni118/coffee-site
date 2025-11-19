@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Miniver&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+
+}
+
+:root {
+  --bg: #fff8f2;           /* Background */
+  --coffee-dark: #4b2e2b;  /* Headings / Navbar / Footer */
+  --coffee-medium: #7b4f37;/* Subheadings / Icons / Borders */
+  --coffee-light: #c8a27e; /* Cards / Sections / Light areas */
+  --accent: #d4a574;       /* Buttons / Highlights / Links */
+  --text: #2b1a16;  
+         /* Normal text */
+         /*font-weight*/
+  --title-size: 3.2rem;        /* Hero title */
+  --subtitle-size: 1.6rem;     /* Hero subtitle */
+  --description-size: 1.15rem; /* Hero paragraph */
+
+  --nav-font: 1.2rem;
+  --nav-height: 80px;
+  --btn-font: 1.1rem;
+  --btn-padding: 0.8rem 1.6rem;
+
+ 
+  --container-width: 1200px;
+  --section-padding: 4rem 0;
+  --small-text: 0.95rem;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background:var(--bg);
+}
+header{
+    background:var(--coffee-dark);
+
+}
+header .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding:10px 40px;
+   
+}
+.nav-menu{
+   display: flex;
+   gap: 10px;
+}
+
+ul{
+    list-style-type: none;
+  
+}
+ a{
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+img{
+    width: 100%;
+}
+.section-content{
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 80%;
+}
+.navbar .logo .logo-text{
+    color: var(--bg); 
+}
+.navbar .nav-menu .nav-link{
+    color: var(--bg); 
+    padding: 10px 18px;
+   /* background:var(--coffee-medium);*/
+    border-radius:15px;
+    transition: 0.3s ease;
+}
+.navbar .nav-menu .nav-link:hover{
+    background: var(--coffee-medium);
+}
+.hero-section{
+    min-height: 100vh;
+    background-color: var(--bg);
+}
+.hero-section .section-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    color: var(--text);
+
+}
+.hero-section .hero-details .title{
+    font-size:var(--title-size);
+    font-weight: 700;
+    font-family: "Miniver",sans-serif;
+}
+.hero-section .hero-details .subtitle{
+    margin-top: 8px;
+    max-width: 70%;
+    font-size:var(--subtitle-size);
+    font-weight: 500;
+    line-height:1.6;
+    color:var(--coffee-medium)
+}
+.hero-section .hero-details .description{
+    max-width: 80%;
+    margin: 24PX 0 40PX;
+    font-size:var(--description-size);
+    line-height:1.6;
+    color: var(--text);
+}
+.hero-section .hero-details .buttons{
+    display: flex;
+    gap: 23px;
+}
+
+.hero-section .hero-details .button{
+    padding: 10px 26px;
+    background:var(--accent);
+    color: var(--text);
+    border:2px solid var(--accent);
+    border-radius:20px;
+    cursor: pointer;
+}
+.hero-section .hero-details .button:hover,.hero-section .hero-details .contact-us{
+    color: var(--coffee-dark);
+    border-color:var(--coffee-medium);
+    background: transparent;
+}
+.hero-section .hero-details .contact-us:hover{
+     background:var(--accent);
+    color: var(--text);
+    border:2px solid var(--accent);
+}
+.hero-section .hero-image-wrapper{
+    max-width: 500px;
+    margin-right:30px;
+}
+@media screen and (max-width:900px){
+   :root {
+    --title-size: 2.4rem;
+    --subtitle-size: 1.2rem;
+    --description-size: 1rem;
+    --nav-font: 1.1rem;     /* size of nav links */
+    --btn-font: 1rem;       /* button text size */
+    --btn-padding: 0.6rem 1rem;
+  }
+  .navbar :where(#menu-close-button,#menu-open-button){
+    font: size 1.3rem;
+    display: block;
+  }
+    .navbar #menu-close-button{
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-size: 20px;
+    }
+ .navbar #menu-open-button{
+    color:white;
+    font-size: 25px;
+    
+ }
+    
+    .navbar .nav-menu{
+     
+        display: flex;
+        position:fixed;
+        left: -300px;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        background: var(--bg);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 100px;
+        
+
+
+    }
+     .navbar .nav-menu .nav-link{
+        color: var(--text);
+        display: block;
+        margin-top: 17px;
+     }
+   
+}
